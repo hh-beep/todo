@@ -1,0 +1,13 @@
+cores claras: 
+
+#BA5C16
+#FFBF8F
+#F2F2F2
+
+
+
+cores escuras:
+
+#131E23
+#243942
+#808080
