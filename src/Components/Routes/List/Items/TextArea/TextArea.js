@@ -1,10 +1,8 @@
-import React, {
-  useEffect
-} from 'react';
+import React from 'react';
 
 import {
-  View, 
-  Text, 
+  View,
+  Text,
   StyleSheet
 } from 'react-native';
 
@@ -15,17 +13,17 @@ import {
 const style = StyleSheet.create({
   container: {
     flex: 1/5,
+    width: "80%",
+    marginHorizontal: "10%",
     justifyContent: 'space-around',
-    alignItems: 'center',
+    alignItems: 'flex-start',
   },
 
   containerText: {
-    width: "80%",
-    marginVertical: "10%",
-    color: "#f2f2f2",
     fontSize: 25,
     fontWeight: '600',
-    letterSpacing: 0.75
+    letterSpacing: 0.75,
+    color: "#f2f2f2"
   },
 })
 
@@ -33,10 +31,10 @@ const style = StyleSheet.create({
 
 
 
-const TextArea = ({  username  }) => {
+const TextArea = () => {
   return (
     <View style={  style.container  }>
-      <Text style={  style.containerText  }>Olá, {username}</Text>
+      <Text style={  style.containerText  }>Lista de Tarefas</Text>
     </View>
   )
 }

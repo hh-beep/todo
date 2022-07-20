@@ -1,27 +1,42 @@
-import React from 'react';
+import React, {
+  useState,
+  useEffect
+} from 'react';
 import {
   StyleSheet,
   Text,
   View,
-  Button
+  Button,
+  FlatList
 } from 'react-native';
 
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-
-const style = StyleSheet.create({
-  container: {
-    backgroundColor: "#243942",
-    flex: 1,
-  }
-})
+/* Components */
+import Items from './Items/Items';
 
 
 
-const List = () => {
+const List = ({  navigation  }) => {
+  
+  const Stack = createNativeStackNavigator()
+
   return (
-    <View style={  style.container  }>
-      <Text>list !</Text>
-    </View>
+    <Stack.Navigator
+      initialRouteName="Items"
+      screenOptions={{  headerShown: false  }}
+    >
+
+
+
+      <Stack.Screen 
+        name="Items"
+        component={  Items  }
+      />
+
+
+
+    </Stack.Navigator>
   )
 }
 

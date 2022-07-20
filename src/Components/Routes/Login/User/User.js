@@ -49,6 +49,8 @@ const User = ({  navigation, route  }) => {
     
       if (  verifyAsync === null  ) {
         await AsyncStorage.setItem("user", JSON.stringify(route.params.user))
+
+        await user.updateProfile({  photoURL: "https://i.redd.it/e942x2087ax71.jpg"  })
       }   
     }
   
